@@ -3,14 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pou</title>
-    <link rel="stylesheet" href="estilo.css">
+    <title>Pow</title>
+    <style>
+        body{margin: 0; justify-content: center; display: flex;}
+        #pantalla{background-color: rgb(246, 136, 136); height: 590px; width: 400px; position: absolute; }
+        div, span{border: 1px solid; height: 100%;  display: flex; justify-content: center;}
+        #parteArriba, #parteSegunda, #parteCentro,#parteAbajo{width: 100%;}
+        #parteArriba{height: 10%;}
+        #parteSegunda{height: 10%;}
+        #parteCentro{height: 70%;}
+        #parteCentro div{width: 100%;}
+        #parteAbajo{height: 10%;}
+        .izquierda {width: 20%; }
+        .centro {width: 60%; }
+        .derecha {width: 20%; }
+        #arribaMedio span{ width: 20%;}
+    </style>
 </head>
 <body>
-    <nav>Pou</nav>
     <section id="pantalla">
-        
+        <div id="parteArriba">
+            <div class="izquierda" id="arribaIzquierda">
+                <span id="moneda">0</span>
+            </div>            
+            <div class="centro" id="arribaMedio">
+                <span id="uno">1</span>
+                <span id="dos">2</span>
+                <span id="tres">3</span>
+                <span id="cuatro">4</span>
+            </div>
+            <div class="derecha" id="arribaDerecha">
+                <span id="huevo">0</span>
+            </div>
+        </div>
+        <div id="parteSegunda">
+            <div class="izquierda" id="segundaIzquierda">
+                <span id="segIzqIcon">|°|</span>
+            </div>
+            <div class="centro" id="segundaMedio">
+                <span class="der" id="segMedioIzqIcon"><</span>
+                <span class="centro" id="segMedioTxt">txt</span>
+                <span id="segMedioDerIcon">></span>
+            </div>            
+            <div class="derecha" id="segundaDerecha">
+                <span id="segDerIcon">?</span>
+            </div>
+        </div>
+        <div id="parteCentro">
+            <div id="personaje">Pou</div>
+            <div id="tiendaMosaico">Tienda</div>
+            <div id="tiendaLista">Lista</div>
+            <div id="inventario">Invnt</div>
+        </div>
+        <div id="parteAbajo">
+            <div class="izquierda" id="abajoIzquierda">
+                <span id="abajoIzqIcon">obj</span>
+            </div>
+            <div class="centro" id="abajoMedio">
+                <span class="izquierda" id="abajoMedioIzqIcon"><</span>
+                <span class="centro" id="abajoMedioTxt">icon txt</span>
+                <span class="derecha" id="abajoMedioDerIcon">></span>
+            </div>            
+            <div class="derecha" id="abajoDerecha">
+                <span id="abajoDerIcon">obj</span>
+            </div>
+        </div>
     </section>
-    <script src="codigo.js"></script>
+    <script>
+        //Empieza la fiesta
+    </script>    
 </body>
 </html>
