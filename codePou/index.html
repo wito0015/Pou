@@ -76,21 +76,36 @@
         /*Ruta de Pou
             1.Pregunta el año de nacimiento y se almacena en CUENTA
             2.Inicia en la COCINA, con 30% de ESTADO de COMIDA, los otros 3 estados en 100%.. los estados ENERGIA Y DIVERSION se reducen por segundo 1 cada 30, SALUD no recude por segundo.
-            3. 200 monedas, nivel 1 huevo
+            3. 200 monedas, Menu -nivel 1
             4. Boton camara para captura de pantalla
-            5. Derecha Izquierda para cambiar de sala (COCINA, BAÑO, LABORATORIO, JUEGOS, DORMITORIO, PASILLO)
+            5. Derecha Izquierda para cambiar de cuarto (COCINA, BAÑO, LABORATORIO, JUEGOS, DORMITORIO, PASILLO)
             6. ? simbolo con descripcion de cada cuarto
             7.En el centro de la pantalla varia segun opciones y aparecen sobre Pou
-            8.COCINA -- NEVERA abre una pantalla tipo INVENTARIO, derecha e izquierda inferiores cambian segun lista de NEVERA
+            8.COCINA -- NEVERA abre una pantalla tipo INVENTARIO, derecha e izquierda inferiores cambian segun lista de NEVERA y asi sucede con los demas CUARTOS o AREAS
             9. La TIENDA muestra pantalla mosaico con los elementos de cada CUARTO ordenados por prioridad de dicho cuarto, al entrar en un elemento aparece una pantalla tipo INVENTARIO o MOSAICO según el caso, terminando siempre en LISTA para comprar.
-            10. El PASILLO lleva a AFUERA, de igual forma se accede por la TIENDA o por el HUEVO del nivel
-            11. AFUERA tiene otra lista de areas (JARDIN, PATIO, GARAJE, CASA, MASCOTA). Cada area posee el mismo TELEFONO, cambia la opcion central inferior sin flechas derecha/izq, aunque PATIO y GARAJE poseen flechas DER e IZQ cambiando la actividad..,, la TIENDA contiene nuevas opciones.
-            12. Cada accion de las opciones centrales generan modenas de distintos montos (1, 5, 10, 25, 50, 100). Las acciones se presentan como LOGROS en pantalla tipo LISTA. Las acciones no se realizn de forma consecutiva.
+            10. El PASILLO lleva a AFUERA, de igual forma se accede por la TIENDA o por el menu nivel
+            11. AFUERA tiene otra lista de areas (JARDIN, PATIO, GARAJE, CASA, MASCOTA). Cada area posee el mismo TELEFONO, cambia la opcion central inferior sin flechas derecha/izq, aunque PATIO y GARAJE poseen flechas DER e IZQ cambiando la actividad..., la TIENDA contiene nuevas opciones.
+            12. Cada accion de las opciones centrales generan modenas de distintos montos (1, 5, 10, 25, 50, 100). Las acciones se presentan como LOGROS en pantalla tipo LISTA. Las acciones no se realizan de forma consecutiva, tiempo de pausa.
             13. Algunos elementos que aparecen en pantalla se modifican al COMPRAR en TIENDA.
+
+            Lista de entidades/clases
+                cuenta(nivel, siguienteNivel, tamaño, porcientoAdulto, monedas, salud, comida, diversion, energia)
+                cuartos(nombre, inventario[nombre,cantidad], accion)
+                tienda(categoria, lista, nombre, precio)
+                menu(logros[nombre, fecha, logrado, monedas], fotos, ajustes[])
         */
         function iniciaInterfaz() {
-            
+            //ocultar o mostrar elemnts
         }
+        function mostrar(id) {            
+        }
+        function ocultar(id) {            
+        }
+        
+        class clscuenta{}
+        class clscuartos{}
+        class clstienda{}
+        class clsmenu{}
 
     </script>
     <script src="codigo.js"></script>
