@@ -102,10 +102,126 @@
         function ocultar(id) {            
         }
         
-        class clscuenta{}
-        class clscuartos{}
-        class clstienda{}
-        class clsmenu{}
+        class clscuenta{
+            constructor(nivel, cantidadSiguienteNivel, tamano, porcientoAdulto, monedas, salud, comida, diversion, energia){
+                this.nivel = nivel
+                this.cantidadSiguienteNivel = cantidadSiguienteNivel
+                this.tamano = tamano
+                this.porcientoAdulto = porcientoAdulto 
+                this.monedas = monedas 
+                this.salud = salud 
+                this.comida = comida
+                this.diversion = diversion
+                this.energia = energia 
+            }
+            agregarQuitarMoneda(accion, cantidad){
+                //sumar o resta balance
+            }
+            seleccionarFechaDeNacimiento1(){}
+            subirNivel(){}
+            aumentarComida2(){}
+            disminuirComidaPorSegundo3(){}
+            aumentarDisminuirSalud4(){}
+            aumentarDisminuirDiversion5(){}
+            aumentardisminuirEnergia6(){}
+            agregarExperienciaParaNivel24(cantidad){}
+            verTiendaDeMonedas6(){}
+        }
+        class clscuartos{
+            constructor(nombre, opcionIzquierda, opcionCentral){
+                this.nombre = nombre
+                this.opcionIzquierda = opcionIzquierda
+                this.opcionCentral = opcionCentral
+            }
+            cambiarCuarto7(siguienteAnterior){}
+            verDescripcion8(){}
+            verOpcionIzquiera9(){}
+            verOpcionesCentrales13(){}
+            cambiarOpcionesInventario14(siguienteAnterior){}
+            darOpcionInventario25(){}
+            irAfuera11(){}
+            irATiendaParaAgregar12(){}
+        }
+        class clstienda{
+            constructor(categoria){
+                this.categoria = categoria
+            }
+            verCategoriasTienda23(){}
+            verListaTienda(){}
+            comprarArticulo10(codigo){}
+            agregarAinventario15(codigo){}
+            desbloquearArticulo16(codigo){}
+        }
+        class clsmenu{
+            constructor(logros, ajustes){
+                this.logros = logros, this.ajustes = ajustes
+            }
+            obtenerLogro17(){}
+            verCategoriasLogros18(){}
+            verListaLogros18(){}
+            mostarLogros19(){}
+            verListaAjustes20(){}
+            cambiarIdioma21(){}
+            cambiarFechaNacimiento27(){}
+            activaDesactivaAjuste22(opcion){}
+            verJuegos26(){}
+        }
+        //CREACION DE OBJETOS *************************************
+            //Colocando estadisticas de inicio del jugador
+            var objCuentaJugador = new clscuenta(1,0,"bebe",0,200,100,100,100,100)
+
+            var objCuarto
+            objCuarto[0] = new clscuartos("Dormitorio", objInventario.armario, "")
+            objCuarto[1] = new clscuartos("Baño", "Ducha", "Jabon")
+            objCuarto[2] = new clscuartos("Cocina", objInventario.nevera, "")
+            objCuarto[3] = new clscuartos("Laboratorio", objInventario.estante, "")
+
+            var objmenu = new clsmenu(objLogros, objAjustes)
+            var objtienda = new clstienda(objCategorias)
+
+            //Objetos independientes para alimentar otros objetos dentro de las clases
+            var objAjustes ={
+                nacimiento: 0,
+                idioma: "",
+                sonido: true,
+                musica: true,
+                notificacion: true,
+                fluidez: false,
+                colores: "azul"
+            },
+            objCategorias = {
+                dormitorio: {},
+                pou: {},
+                papelPared: {},
+                comida: {
+                    desayuno: {
+                        nombre: "Desayuno", 
+                        tocino: {
+                            nombre:"Tocino", 
+                            precio: 3, 
+                            bloqueado: false, 
+                            cantidadInventario: 0, 
+                            cantidadAumentada: 10
+                        }
+                    }
+                },
+                pociones: {},
+                duchas:{},
+                jabones:{},
+                pelotas:{}
+            },
+            objInventario = {
+                nevera: [],
+                estante: [],
+                juegos: [],
+                armario: []
+            },
+            objLogros = {
+                nombre: "Logro #1",
+                recompensa: 50, 
+                bloqueado: true,
+                fecha: ""
+            }
 
     </script>
     <script src="codigo.js"></script>
