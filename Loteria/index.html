@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotería</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        h2 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Sorteo de 3 números (00 al 99)</h2>
+    <button onclick="sortearNumeros(3, 0, 99)">¡Sortear!</button>
+    <p id="resultado1"></p>
+
+    <h2>Sorteo de 6 números (01 al 40)</h2>
+    <button onclick="sortearNumeros(6, 1, 40)">¡Sortear!</button>
+    <p id="resultado2"></p>
+
+    <script>
+        function sortearNumeros(cantidad, min, max) {
+            let numerosSorteados = [];
+            for (let i = 0; i < cantidad; i++) {
+                let numero = Math.floor(Math.random() * (max - min + 1)) + min;
+                numerosSorteados.push(numero.toLocaleString('en-US', {minimumIntegerDigits: 2}));
+            }
+
+            const resultado = numerosSorteados.join(' - ');
+            if (cantidad === 3) {
+                document.getElementById('resultado1').innerText = `Números sorteados: ${resultado}`;
+            } else {
+                document.getElementById('resultado2').innerText = `Números sorteados: ${resultado}`;
+            }
+        }
+    </script>
+
+</body>
+</html>
